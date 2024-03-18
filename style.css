@@ -677,12 +677,12 @@ body, * {
   }
   #inicio .container {
     align-items: center;
-    padding-top: 8%;
+    padding-top: 9%;
     padding-bottom: 20%;
   }
   #inicio ul {
     gap: 2.5rem;
-    font-size: 0.625rem;
+    font-size: 13px;
   }
   #inicio ul a {
     padding: 8px 16px;
