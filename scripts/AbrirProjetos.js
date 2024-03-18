@@ -143,6 +143,14 @@ export default class AbrirProjetos {
     this.interval = null;
     this.projeto = null;
     this.index = 0;
+    this.preloadImages();
+  }
+
+  preloadImages() {
+    this.projeto.imagens.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
   }
 
   passarFotosProjeto() {

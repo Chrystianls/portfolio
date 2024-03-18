@@ -21,6 +21,6 @@ export default class Carrossel {
   }
 
   init() {
-      this.autoScroll = setInterval(this.passarCarrossel, 10);
+    this.autoScroll = setInterval(this.passarCarrossel, 10);
   }
 }
