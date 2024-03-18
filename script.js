@@ -4,9 +4,6 @@ import ScrollSuave from "./scripts/ScrollSuave.js";
 import AnimeOnScroll from "./scripts/AnimeOnScroll.js";
 import AbrirOutrosProjetos from "./scripts/AbrirOutrosProjetos.js";
 
-const detalhesProjetos = 1;
-
-
 const animeOnScroll = new AnimeOnScroll();
 animeOnScroll.init(); 
 
