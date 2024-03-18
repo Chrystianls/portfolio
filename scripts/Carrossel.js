@@ -21,6 +21,10 @@ export default class Carrossel {
   }
 
   init() {
-    this.autoScroll = setInterval(this.passarCarrossel, 10);
+    if(window.innerWidth > 570) {
+      this.autoScroll = setInterval(this.passarCarrossel, 10);
+    } else {
+      this.autoScroll = setInterval(this.passarCarrossel, 5);
+    }
   }
 }
