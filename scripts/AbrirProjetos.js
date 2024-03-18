@@ -146,7 +146,21 @@ export default class AbrirProjetos {
   passarFotosProjeto() {
     this.index = (this.index + 1) % this.projeto.imagens.length;
     const src = this.projeto.imagens[this.index];
-    this.container.children[0].innerHTML = `<img src="${src}" alt="${this.projeto.descricao.titulo}">`;
+    
+    // Definir uma altura fixa para o contêiner da imagem
+    this.container.children[0].style.height = "505px"; // Defina a altura desejada
+  
+    // Em seguida, defina o atributo "src" da imagem
+    const imgElement = document.createElement("img");
+    imgElement.onload = () => {
+      // Quando a imagem for carregada, remova a altura fixa
+      this.container.children[0].style.height = ""; // Remova a altura fixa
+    };
+    imgElement.src = src;
+    
+    // Substitua o conteúdo do contêiner com a nova imagem
+    this.container.children[0].innerHTML = "";
+    this.container.children[0].appendChild(imgElement);
   }
 
   preencherElementos() {
