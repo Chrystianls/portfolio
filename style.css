@@ -689,6 +689,9 @@ body, * {
     background-color: var(--branco);
     border-radius: 10px;
   }
+  #inicio ul a::after {
+    display: none;
+  }
   #inicio .container div h1, #inicio .container div p {
     display: none;
   }
