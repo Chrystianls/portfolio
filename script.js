@@ -1,7 +1,7 @@
 import AbrirProjetos from "./scripts/AbrirProjetos.js";
 import Carrossel from "./scripts/Carrossel.js";
 import ScrollSuave from "./scripts/ScrollSuave.js";
-import AnimeOnScroll from "./scripts/AnimeOnScroll";
+import AnimeOnScroll from "./scripts/AnimeOnScroll.js";
 import AbrirOutrosProjetos from "./scripts/AbrirOutrosProjetos.js";
 
 const animeOnScroll = new AnimeOnScroll();
