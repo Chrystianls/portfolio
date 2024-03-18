@@ -773,6 +773,7 @@ body, * {
     font-size: 50px;
     text-align: center;
     margin-top: 60px;
+    margin-left: 0px;
   }
   #outros .container h2 span {
     font-size: inherit;
@@ -856,3 +857,5 @@ body, * {
 .mostrar {
   animation: zoom 0.5s forwards;
 }
+
+
