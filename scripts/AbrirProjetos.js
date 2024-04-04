@@ -135,6 +135,7 @@ export default class AbrirProjetos {
     this.carrossel = document.querySelectorAll("#carrossel img");
     this.btnAnterior = document.getElementById("btn-anterior");
     this.btnProximo = document.getElementById("btn-proximo");
+    this.btnProjetos = document.querySelectorAll("#carrossel div button");
     this.indexProjeto = null;
     this.abrirProjeto = this.abrirProjeto.bind(this);
     this.passarFotosProjeto = this.passarFotosProjeto.bind(this);
@@ -203,12 +204,12 @@ export default class AbrirProjetos {
     }
   }
 
-  abrirProjeto(alt) {
+  abrirProjeto(dataSet) {
     if (this.interval) {
       clearInterval(this.interval);
       this.interval = null;
     }
-    this.indexProjeto = Number(alt.replace(/[^\d]/g, "")) - 1;
+    this.indexProjeto = Number(dataSet) - 1;
     this.projeto = this.projetos[this.indexProjeto];
     this.preencherElementos();
     this.scrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -222,9 +223,9 @@ export default class AbrirProjetos {
   }
 
   init() {
-    this.carrossel.forEach((img) =>
-      img.addEventListener("pointerdown", ({ target }) =>
-        this.abrirProjeto(target.alt),
+    this.btnProjetos.forEach((projeto) =>
+      projeto.addEventListener("pointerdown", ({ target }) =>
+        this.abrirProjeto(target.dataset.projeto),
       ),
     );
 
