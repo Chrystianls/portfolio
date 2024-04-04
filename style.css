@@ -814,6 +814,7 @@ body, * {
   }
   #projetos .projetos-imagens img {
     max-width: 100%;
+    height: auto;
   }
   #projetos .projetos-descricao {
     width: 90%;
